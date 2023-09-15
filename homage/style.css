@@ -1,0 +1,156 @@
+body {
+  background-color: #371373;
+  margin: 0;
+  margin-top: 5%;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #FFF;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .05s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right:40px;
+}
+
+.manual-btn:hover {
+  background-color: #FFF;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  border: 3px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #FFF;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #FFF;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: #FFF;
+}
+
+
+.quote {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875em;
+  color: #6c757d;
+}
+
+.card-category {
+  display: grid;
+  grid-gap: 5px;
+  color: black;
+  border-radius: 25px;
+  background: white;
+  transition: background 0.3s ease;
+  border: 1px solid #4A4A4A;
+  place-items: center;
+  padding: 20px 20px;
+  height: 100%;
+  width: 50%;
+  text-align: justify;
+  align-items: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 100px;
+  margin-left: 35%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  height: 50%;
+  width: 50%;
+
+}
+
+.shadow-swa {
+  height: 80px;
+  object-fit: cover;
+  border-radius: 40%;
+}
